@@ -2,7 +2,6 @@
 
 5층 건물 엘리베이터를 PLC (Programmable Logic Controller)로 제어하는 프로젝트
 LS산전 XGI 시리즈 PLC와 XG5000 (Ladder Logic)을 활용하여 다중 호출 처리, 문 제어, 비상정지 등 실제 엘리베이터 운행 로직을 구현하고, C# 기반 HMI 화면과 실시간 통신으로 연동합니다.
-
 <br/>
 
 ## 📌 프로젝트 개요
