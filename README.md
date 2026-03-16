@@ -30,20 +30,16 @@ LS산전 XGI 시리즈 PLC와 XG5000(Ladder Logic)을 활용하여 다중 호출
 
 ```
 Elevator-PLC-Control/
-├── plc/                           # PLC 프로젝트 파일
-│   ├── elevator_main.xgx          # XG5000 메인 프로젝트
-│   └── ladder/                    # Ladder Logic 소스
-│       ├── call_queue.ld          # 호출 큐 및 방향 판별
-│       ├── door_control.ld        # 문 제어 및 타이머
-│       └── emergency.ld           # 인터락 및 비상정지
-├── hmi/                           # WPF HMI 프로젝트
-│   ├── ElevatorHMI.sln            # Visual Studio 솔루션
-│   └── src/                       # C# 소스 코드
-│       ├── MainWindow.xaml        # 메인 화면 레이아웃
-│       └── PlcComm.cs             # PLC 통신 모듈
-├── docs/                          # 문서 및 발표 자료
-│   ├── 엘리베이터_LD_다이어그램.md # PLC 메모리맵 및 LD다이어그램
-│   └── elevator-plc-final.pptx
+├── hmi/                              # WPF HMI 프로젝트
+├── UI_26-03-12.slnx                 # Visual Studio 솔루션
+│   └── ElevatorHMI/                 # C# 소스 코드
+│       ├── MainWindow.xaml          # 메인 화면 레이아웃
+│       ├── MainWindow.xaml.cs       # 메인 화면 코드
+│       ├── PlcService.cs            # PLC 통신 서비스
+│       ├── XGCommLib.cs             # XG 통신 라이브러리 래퍼
+│       └── XGCommLib64.dll          # LS산전 통신 DLL
+├── elevator.xgwx                    # XG5000 PLC 프로젝트 파일
+├── 엘리베이터_LD_다이어그램.md       # 래더 로직 다이어그램 문서
 └── README.md
 ```
 
@@ -71,6 +67,7 @@ PLC와 WPF HMI는 동일한 메모리맵 구조를 공유하여 상태를 실시
 | **안전 플래그** | MB20 | 비상정지 / 문 상태 / 이동 가능 |
 | **WPF 입력** | MB30 ~ MB31 | 외부 호출 / 내부 버튼 / 문 제어 / 비상정지 |
 
+
 <br/>
 
 ## ⚙️ 제어 로직
@@ -82,6 +79,7 @@ PLC와 WPF HMI는 동일한 메모리맵 구조를 공유하여 상태를 실시
 | T0 | 3초 | 문 열림 유지 |
 | T1 | 2초 | 문 열리는 동작 완료 |
 | T2 | 2초 | 문 닫히는 동작 완료 |
+| T3 | 500ms | 예비 |
 | T4 | 2초 | 층간 이동 |
 
 ### 인터락 조건
@@ -125,7 +123,7 @@ PLC와 WPF HMI는 동일한 메모리맵 구조를 공유하여 상태를 실시
 
 - **C# / WPF**: HMI 화면 개발
 - **Visual Studio**: 개발 환경
-- **PLC 통신 라이브러리**: 실시간 메모리 읽기/쓰기
+- **XGCommLib (LS산전 제공 DLL)**: 실시간 PLC 메모리 읽기/쓰기
 
 ### 버전 관리
 
@@ -147,4 +145,3 @@ PLC와 WPF HMI는 동일한 메모리맵 구조를 공유하여 상태를 실시
 이하일 · 김수현 · 민찬우 · 양태균
 
 > 포스코 X 코딩온 스마트팩토리 10기
-
