@@ -30,19 +30,19 @@ LS산전 XGI 시리즈 PLC와 XG5000(Ladder Logic)을 활용하여 다중 호출
 
 ```
 Elevator-PLC-Control/
-├── plc/                        # PLC 프로젝트 파일
-│   ├── elevator_main.xgx      # XG5000 메인 프로젝트
-│   └── ladder/                # Ladder Logic 소스
-│       ├── call_queue.ld      # 호출 큐 및 방향 판별
-│       ├── door_control.ld    # 문 제어 및 타이머
-│       └── emergency.ld       # 인터락 및 비상정지
-├── hmi/                        # WPF HMI 프로젝트
-│   ├── ElevatorHMI.sln        # Visual Studio 솔루션
-│   └── src/                   # C# 소스 코드
-│       ├── MainWindow.xaml    # 메인 화면 레이아웃
-│       └── PlcComm.cs         # PLC 통신 모듈
-├── docs/                       # 문서 및 발표 자료
-│   ├── memory_map.xlsx        # PLC 메모리맵 정의서
+├── plc/                           # PLC 프로젝트 파일
+│   ├── elevator_main.xgx          # XG5000 메인 프로젝트
+│   └── ladder/                    # Ladder Logic 소스
+│       ├── call_queue.ld          # 호출 큐 및 방향 판별
+│       ├── door_control.ld        # 문 제어 및 타이머
+│       └── emergency.ld           # 인터락 및 비상정지
+├── hmi/                           # WPF HMI 프로젝트
+│   ├── ElevatorHMI.sln            # Visual Studio 솔루션
+│   └── src/                       # C# 소스 코드
+│       ├── MainWindow.xaml        # 메인 화면 레이아웃
+│       └── PlcComm.cs             # PLC 통신 모듈
+├── docs/                          # 문서 및 발표 자료
+│   ├── 엘리베이터_LD_다이어그램.md # PLC 메모리맵 및 LD다이어그램
 │   └── elevator-plc-final.pptx
 └── README.md
 ```
