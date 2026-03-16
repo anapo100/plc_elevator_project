@@ -31,7 +31,6 @@ LS산전 XGI 시리즈 PLC와 XG5000(Ladder Logic)을 활용하여 다중 호출
 ```
 Elevator-PLC-Control/
 ├── hmi/                              # WPF HMI 프로젝트
-├── UI_26-03-12.slnx                 # Visual Studio 솔루션
 │   └── ElevatorHMI/                 # C# 소스 코드
 │       ├── MainWindow.xaml          # 메인 화면 레이아웃
 │       ├── MainWindow.xaml.cs       # 메인 화면 코드
