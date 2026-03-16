@@ -38,7 +38,8 @@ Elevator-PLC-Control/
 │       ├── PlcService.cs            # PLC 통신 서비스
 │       ├── XGCommLib.cs             # XG 통신 라이브러리 래퍼
 │       └── XGCommLib64.dll          # LS산전 통신 DLL
-├── elevator.xgwx                    # XG5000 PLC 프로젝트 파일
+├── Elevator_XG5000
+│   └── elevator.xgwx                    # XG5000 PLC 프로젝트 파일
 ├── 엘리베이터_LD_다이어그램.md       # 래더 로직 다이어그램 문서
 └── README.md
 ```
