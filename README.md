@@ -1,4 +1,4 @@
-# 🛗 Elevator_PLC_Control
+# 🛗 plc_elevator_project
 
 5층 건물 엘리베이터를 PLC(Programmable Logic Controller)로 제어하는 프로젝트.
 
